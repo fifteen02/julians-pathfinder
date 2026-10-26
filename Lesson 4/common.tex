@@ -1,0 +1,24 @@
+\usepackage{fontspec}
+\setmainfont[Path=fonts/,FontIndex=7,BoldFont=AvenirNext.ttc,BoldFeatures={FontIndex=2},ItalicFont=AvenirNext.ttc,ItalicFeatures={FontIndex=4},BoldItalicFont=AvenirNext.ttc,BoldItalicFeatures={FontIndex=3}]{AvenirNext.ttc}
+\setsansfont[Path=fonts/,FontIndex=7,BoldFont=AvenirNext.ttc,BoldFeatures={FontIndex=2},ItalicFont=AvenirNext.ttc,ItalicFeatures={FontIndex=4},BoldItalicFont=AvenirNext.ttc,BoldItalicFeatures={FontIndex=3}]{AvenirNext.ttc}
+\newfontfamily\heavy[Path=fonts/,FontIndex=2]{AvenirNext.ttc}
+\setmonofont[Path=fonts/,BoldFont=JetBrainsMono-Bold.ttf,ItalicFont=JetBrainsMono-Italic.ttf,Contextuals=NoAlternate,Ligatures=NoCommon]{JetBrainsMono-Regular.ttf}
+\usepackage{xcolor,graphicx,tikz,booktabs,tabularx,listings,amsmath}
+\usetikzlibrary{arrows.meta,positioning}
+\definecolor{paper}{HTML}{FFFFFF}
+\definecolor{ink}{HTML}{252525}
+\definecolor{teal}{HTML}{252525}
+\definecolor{orange}{HTML}{777777}
+\definecolor{wash}{HTML}{EAEAEA}
+\definecolor{quiet}{HTML}{666666}
+\definecolor{lightink}{HTML}{D0D0D0}
+\definecolor{codepaper}{HTML}{F6F6F4}
+\lstset{language=Python,basicstyle=\ttfamily\fontsize{9.5}{13}\selectfont\color{ink},keywordstyle=\bfseries\color{ink},commentstyle=\itshape\color{quiet},stringstyle=\color{ink},showstringspaces=false,columns=fullflexible,keepspaces=true,breaklines=true,breakatwhitespace=true,numbers=none,upquote=true,aboveskip=8pt,belowskip=6pt}
+\hyphenpenalty=4000
+\emergencystretch=3em
+% The same two-line navigation and fine rule as the reference, without a candy motif.
+\newcommand{\guideheader}[2]{\begin{tikzpicture}[remember picture,overlay]
+\node[anchor=north west,inner sep=0,text width=176mm] at ([xshift=16mm,yshift=-7mm]current page.north west) {\fontsize{8.5}{10}\selectfont\color{quiet}#1};
+\node[anchor=north west,inner sep=0,text width=176mm] at ([xshift=16mm,yshift=-11.5mm]current page.north west) {\heavy\fontsize{10}{12}\selectfont\color{ink}#2};
+\draw[lightink,line width=.4pt] ([xshift=16mm,yshift=-17mm]current page.north west)--([xshift=192mm,yshift=-17mm]current page.north west);
+\end{tikzpicture}}

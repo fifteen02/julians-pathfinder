@@ -1,0 +1,38 @@
+[
+  {
+    "problem": "feast",
+    "size": "small",
+    "input": "feast/small.in",
+    "output": "feast/small.out"
+  },
+  {
+    "problem": "feast",
+    "size": "medium",
+    "input": "feast/medium.in",
+    "output": "feast/medium.out"
+  },
+  {
+    "problem": "feast",
+    "size": "large",
+    "input": "feast/large.in",
+    "output": "feast/large.out"
+  },
+  {
+    "problem": "feast",
+    "size": "small",
+    "input": "feast/edge-1.in",
+    "output": "feast/edge-1.out"
+  },
+  {
+    "problem": "feast",
+    "size": "small",
+    "input": "feast/edge-2.in",
+    "output": "feast/edge-2.out"
+  },
+  {
+    "problem": "feast",
+    "size": "small",
+    "input": "feast/edge-3.in",
+    "output": "feast/edge-3.out"
+  }
+]

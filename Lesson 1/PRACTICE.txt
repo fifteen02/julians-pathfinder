@@ -1,0 +1,69 @@
+LESSON 1: FILE-BASED PRACTICE
+
+Edit starter.py. Each named function receives parsed data and returns its answer.
+The loader and test runner are ready; no solution is imported by the starter.
+Keep runner.py and test-cases/ beside starter.py.
+
+python3 starter.py                         # all small and edge tests
+python3 starter.py --problem PROBLEM --size medium
+python3 starter.py --problem PROBLEM --size large
+python3 starter.py --size all              # all sizes and edge tests
+python3 starter.py --problem PROBLEM --file test-cases/PROBLEM/small.in
+python3 solution.py --size all             # teacher's completed solution
+
+Replace PROBLEM with one of: staircase, stride13, frog, frog-path.
+Paths in the default suite are resolved relative to runner.py, so running from
+another working directory works. A --file path is relative to your current directory.
+Each .in has a matching .out containing the expected answer, not an algorithm.
+The runner compares answers and prints PASS or FAIL, never silently treating an
+unfinished function as a pass. Each case runs in a separate process. Default timeout:
+30 seconds per case; change it with --timeout 60 if your machine needs longer.
+A timeout or RecursionError is reported so a slow attempt does not stop later cases.
+Timing includes process startup and is not an online-judge performance guarantee.
+
+RECURSION
+Python stops recursion at about 1,000 nested calls by default. A recursive
+solution (cached or not) is for the small and edge files only; on medium and
+large files it may stop with RECURSION LIMIT or run out of time. Use an
+iterative loop for those.
+
+FORMAT
+staircase: Staircase
+  Input:  One line: the target step n.
+  Answer: Exact integer (no modulo).
+stride13: Staircase with jumps 1 or 3
+  Input:  One line: the target step n.
+  Answer: Exact integer (no modulo).
+frog: Frog
+  Input:  Line 1: n, the number of stones. Line 2: the n heights.
+  Answer: Minimum total cost.
+frog-path: Frog: recover a route
+  Input:  Line 1: n. Line 2: the n heights.
+  Answer: Pair (cost, path); path lists stone indices. Ties keep predecessor i - 1.
+
+EDGE FILES (run with the small tests)
+staircase/edge-1.in: n = 0: the empty route counts once, so the answer is 1.
+staircase/edge-2.in: n = 1: only one jump of 1; the program must not read step -1.
+stride13/edge-1.in: n = 0: the empty route counts once, so the answer is 1.
+stride13/edge-2.in: n = 2: only 1 + 1 fits, because a jump of 3 overshoots; the answer is 1.
+frog/edge-1.in: Two stones of equal height: one jump costing 0, and there is no stone i - 2 to read.
+frog-path/edge-1.in: A single stone: cost 0 and path [0].
+frog-path/edge-2.in: Equal heights: keep i - 1 at each tie, returning every stone index.
+frog-path/edge-3.in: Two cheapest routes: keep the predecessor i - 1 when final costs tie.
+
+DATASET SIZES
+staircase    small  target 5
+staircase    medium target 100
+staircase    large  target 10,000
+stride13     small  target 5
+stride13     medium target 100
+stride13     large  target 10,000
+frog         small  6 stones
+frog         medium 500 stones
+frog         large  100,000 stones
+frog-path    small  6 entries
+frog-path    medium 500 entries
+frog-path    large  100,000 entries
+
+Expected outputs were cross-checked by forward propagation, an independent
+formulation of the same rules.

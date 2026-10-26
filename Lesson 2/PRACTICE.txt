@@ -1,0 +1,60 @@
+LESSON 2: FILE-BASED PRACTICE
+
+Edit starter.py. Each named function receives parsed data and returns its answer.
+The loader and test runner are ready; no solution is imported by the starter.
+Keep runner.py and test-cases/ beside starter.py.
+
+python3 starter.py                         # all small and edge tests
+python3 starter.py --problem PROBLEM --size medium
+python3 starter.py --problem PROBLEM --size large
+python3 starter.py --size all              # all sizes and edge tests
+python3 starter.py --problem PROBLEM --file test-cases/PROBLEM/small.in
+python3 solution.py --size all             # teacher's completed solution
+
+Replace PROBLEM with one of: dice, dice123, grid.
+Paths in the default suite are resolved relative to runner.py, so running from
+another working directory works. A --file path is relative to your current directory.
+Each .in has a matching .out containing the expected answer, not an algorithm.
+The runner compares answers and prints PASS or FAIL, never silently treating an
+unfinished function as a pass. Each case runs in a separate process. Default timeout:
+30 seconds per case; change it with --timeout 60 if your machine needs longer.
+A timeout or RecursionError is reported so a slow attempt does not stop later cases.
+Timing includes process startup and is not an online-judge performance guarantee.
+
+RECURSION
+Python stops recursion at about 1,000 nested calls by default. A recursive
+solution (cached or not) is for the small and edge files only; on medium and
+large files it may stop with RECURSION LIMIT or run out of time. Use an
+iterative loop for those.
+
+FORMAT
+dice: Dice Combinations
+  Input:  One line: the target total n.
+  Answer: Count modulo 1,000,000,007.
+dice123: Dice with faces 1 to 3
+  Input:  One line: the target total n.
+  Answer: Count modulo 1,000,000,007.
+grid: Grid Paths
+  Input:  Line 1: n. Then n lines of n characters: . is open and * is blocked.
+  Answer: Count modulo 1,000,000,007.
+
+EDGE FILES (run with the small tests)
+dice/edge-1.in: n = 1: a single throw of 1; the answer is 1.
+dice/edge-2.in: n = 7: the first total above the largest face, so all six faces fit; the answer is 1 + 2 + 4 + 8 + 16 + 32 = 63.
+dice123/edge-1.in: n = 1: only the face 1 fits; the answer is 1.
+grid/edge-1.in: A 1 by 1 grid whose only cell is blocked: the start is blocked, so the answer is 0.
+grid/edge-2.in: A 1 by 1 open grid: the start is the finish, so the answer is 1.
+
+DATASET SIZES
+dice         small  target 3
+dice         medium target 1,000
+dice         large  target 1,000,000
+dice123      small  target 5
+dice123      medium target 1,000
+dice123      large  target 1,000,000
+grid         small  3 by 3 grid
+grid         medium 30 by 30 grid
+grid         large  1,000 by 1,000 grid
+
+Expected outputs were cross-checked by forward propagation; the open
+1,000 by 1,000 grid uses a binomial coefficient.

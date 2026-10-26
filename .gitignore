@@ -1,0 +1,14 @@
+.DS_Store
+__pycache__/
+*.pyc
+*.aux
+*.log
+*.toc
+*.nav
+*.snm
+*.synctex.gz
+/Course source/build/
+/Course source/.qa-venv/
+/Course source/.qa-jupyter/
+/Archive/
+/Lessons 1-5.zip

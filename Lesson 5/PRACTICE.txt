@@ -1,0 +1,48 @@
+LESSON 5: FILE-BASED PRACTICE
+
+Edit starter.py. Each named function receives parsed data and returns its answer.
+The loader and test runner are ready; no solution is imported by the starter.
+Keep runner.py and test-cases/ beside starter.py.
+
+python3 starter.py                         # all small and edge tests
+python3 starter.py --problem PROBLEM --size medium
+python3 starter.py --problem PROBLEM --size large
+python3 starter.py --size all              # all sizes and edge tests
+python3 starter.py --problem PROBLEM --file test-cases/PROBLEM/small.in
+python3 solution.py --size all             # teacher's completed solution
+
+Replace PROBLEM with hps.
+Paths in the default suite are resolved relative to runner.py, so running from
+another working directory works. A --file path is relative to your current directory.
+Each .in has a matching .out containing the expected answer, not an algorithm.
+The runner compares answers and prints PASS or FAIL, never silently treating an
+unfinished function as a pass. Each case runs in a separate process. Default timeout:
+30 seconds per case; change it with --timeout 60 if your machine needs longer.
+A timeout or RecursionError is reported so a slow attempt does not stop later cases.
+Timing includes process startup and is not an online-judge performance guarantee.
+
+RECURSION
+Python stops recursion at about 1,000 nested calls by default. A recursive
+solution (cached or not) is for the small and edge files only; on medium and
+large files it may stop with RECURSION LIMIT or run out of time. Use an
+iterative loop for those.
+
+FORMAT
+hps: Hoof, Paper, Scissors
+  Input:  Line 1: n and the switch budget K. Then n lines, each H, P or S (John's gestures).
+  Answer: Most rounds won.
+The local runner reads the named .in file; the separate programs/ adapters
+keep the original judge filenames (hps.in / hps.out).
+
+EDGE FILES (run with the small tests)
+hps/edge-1.in: HHH with budget 0: keep one gesture; P wins all three rounds, so the answer is 3.
+hps/edge-2.in: A single round S with an unused budget of 2: the answer is 1.
+
+DATASET SIZES
+hps          small  5 rounds; budget 1
+hps          medium 1,000 rounds; budget 5
+hps          large  100,000 rounds; budget 20
+
+Expected outputs were cross-checked by forward propagation over
+(switches used, previous gesture); large HPS has 21 constant runs, so 20
+switches win every round.

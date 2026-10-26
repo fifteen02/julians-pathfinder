@@ -1,0 +1,122 @@
+[
+  {
+    "problem": "staircase",
+    "size": "small",
+    "input": "staircase/small.in",
+    "output": "staircase/small.out"
+  },
+  {
+    "problem": "staircase",
+    "size": "medium",
+    "input": "staircase/medium.in",
+    "output": "staircase/medium.out"
+  },
+  {
+    "problem": "staircase",
+    "size": "large",
+    "input": "staircase/large.in",
+    "output": "staircase/large.out"
+  },
+  {
+    "problem": "staircase",
+    "size": "small",
+    "input": "staircase/edge-1.in",
+    "output": "staircase/edge-1.out"
+  },
+  {
+    "problem": "staircase",
+    "size": "small",
+    "input": "staircase/edge-2.in",
+    "output": "staircase/edge-2.out"
+  },
+  {
+    "problem": "stride13",
+    "size": "small",
+    "input": "stride13/small.in",
+    "output": "stride13/small.out"
+  },
+  {
+    "problem": "stride13",
+    "size": "medium",
+    "input": "stride13/medium.in",
+    "output": "stride13/medium.out"
+  },
+  {
+    "problem": "stride13",
+    "size": "large",
+    "input": "stride13/large.in",
+    "output": "stride13/large.out"
+  },
+  {
+    "problem": "stride13",
+    "size": "small",
+    "input": "stride13/edge-1.in",
+    "output": "stride13/edge-1.out"
+  },
+  {
+    "problem": "stride13",
+    "size": "small",
+    "input": "stride13/edge-2.in",
+    "output": "stride13/edge-2.out"
+  },
+  {
+    "problem": "frog",
+    "size": "small",
+    "input": "frog/small.in",
+    "output": "frog/small.out"
+  },
+  {
+    "problem": "frog",
+    "size": "medium",
+    "input": "frog/medium.in",
+    "output": "frog/medium.out"
+  },
+  {
+    "problem": "frog",
+    "size": "large",
+    "input": "frog/large.in",
+    "output": "frog/large.out"
+  },
+  {
+    "problem": "frog",
+    "size": "small",
+    "input": "frog/edge-1.in",
+    "output": "frog/edge-1.out"
+  },
+  {
+    "problem": "frog-path",
+    "size": "small",
+    "input": "frog-path/small.in",
+    "output": "frog-path/small.out"
+  },
+  {
+    "problem": "frog-path",
+    "size": "medium",
+    "input": "frog-path/medium.in",
+    "output": "frog-path/medium.out"
+  },
+  {
+    "problem": "frog-path",
+    "size": "large",
+    "input": "frog-path/large.in",
+    "output": "frog-path/large.out"
+  },
+  {
+    "problem": "frog-path",
+    "size": "small",
+    "input": "frog-path/edge-1.in",
+    "output": "frog-path/edge-1.out"
+  },
+  {
+    "problem": "frog-path",
+    "size": "small",
+    "input": "frog-path/edge-2.in",
+    "output": "frog-path/edge-2.out"
+  },
+  {
+    "problem": "frog-path",
+    "size": "small",
+    "input": "frog-path/edge-3.in",
+    "output": "frog-path/edge-3.out"
+  }
+]

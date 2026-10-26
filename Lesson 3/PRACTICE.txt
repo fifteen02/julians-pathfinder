@@ -1,0 +1,53 @@
+LESSON 3: FILE-BASED PRACTICE
+
+Edit starter.py. Each named function receives parsed data and returns its answer.
+The loader and test runner are ready; no solution is imported by the starter.
+Keep runner.py and test-cases/ beside starter.py.
+
+python3 starter.py                         # all small and edge tests
+python3 starter.py --problem PROBLEM --size medium
+python3 starter.py --problem PROBLEM --size large
+python3 starter.py --size all              # all sizes and edge tests
+python3 starter.py --problem PROBLEM --file test-cases/PROBLEM/small.in
+python3 solution.py --size all             # teacher's completed solution
+
+Replace PROBLEM with one of: tower, array.
+Paths in the default suite are resolved relative to runner.py, so running from
+another working directory works. A --file path is relative to your current directory.
+Each .in has a matching .out containing the expected answer, not an algorithm.
+The runner compares answers and prints PASS or FAIL, never silently treating an
+unfinished function as a pass. Each case runs in a separate process. Default timeout:
+30 seconds per case; change it with --timeout 60 if your machine needs longer.
+A timeout or RecursionError is reported so a slow attempt does not stop later cases.
+Timing includes process startup and is not an online-judge performance guarantee.
+
+RECURSION
+Python stops recursion at about 1,000 nested calls by default. A recursive
+solution (cached or not) is for the small and edge files only; on medium and
+large files it may stop with RECURSION LIMIT or run out of time. Use an
+iterative loop for those.
+
+FORMAT
+tower: Mortal Kombat Tower
+  Input:  Line 1: t, the number of towers. For each tower: a line with n, then a line with n boss types (0 easy, 1 hard).
+  Answer: One line per tower: the fewest points your friend pays.
+array: Array Description
+  Input:  Line 1: n and m. Line 2: the n entries, with 0 for a missing value.
+  Answer: Count modulo 1,000,000,007.
+
+EDGE FILES (run with the small tests)
+tower/edge-1.in: One hard boss: your friend must take it and pays 1; taking two bosses is out of range.
+tower/edge-2.in: One easy boss: your friend pays 0; taking two bosses is out of range.
+array/edge-1.in: Fixed values 1 and 3 next to each other (m = 3): they differ by 2, so no filling exists and the answer is 0.
+array/edge-2.in: A single missing entry with m = 3: any of 1, 2, 3 fits, so the answer is 3.
+
+DATASET SIZES
+tower        small  4 bosses
+tower        medium 1,000 bosses
+tower        large  200,000 bosses
+array        small  4 entries; m = 3
+array        medium 1,000 entries; m = 10
+array        large  100,000 entries; m = 100
+
+Expected outputs were cross-checked by forward propagation over (position, turn)
+for Tower and by a dictionary of ending values for Array Description.

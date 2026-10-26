@@ -1,0 +1,50 @@
+LESSON 4: FILE-BASED PRACTICE
+
+Edit starter.py. Each named function receives parsed data and returns its answer.
+The loader and test runner are ready; no solution is imported by the starter.
+Keep runner.py and test-cases/ beside starter.py.
+
+python3 starter.py                         # all small and edge tests
+python3 starter.py --problem PROBLEM --size medium
+python3 starter.py --problem PROBLEM --size large
+python3 starter.py --size all              # all sizes and edge tests
+python3 starter.py --problem PROBLEM --file test-cases/PROBLEM/small.in
+python3 solution.py --size all             # teacher's completed solution
+
+Replace PROBLEM with feast.
+Paths in the default suite are resolved relative to runner.py, so running from
+another working directory works. A --file path is relative to your current directory.
+Each .in has a matching .out containing the expected answer, not an algorithm.
+The runner compares answers and prints PASS or FAIL, never silently treating an
+unfinished function as a pass. Each case runs in a separate process. Default timeout:
+30 seconds per case; change it with --timeout 60 if your machine needs longer.
+A timeout or RecursionError is reported so a slow attempt does not stop later cases.
+Timing includes process startup and is not an online-judge performance guarantee.
+
+RECURSION
+Python stops recursion at about 1,000 nested calls by default. A recursive
+solution (cached or not) is for the small and edge files only; on medium and
+large files it may stop with RECURSION LIMIT or run out of time. Use an
+iterative loop for those.
+
+FORMAT
+feast: Fruit Feast
+  Input:  One line: limit a b.
+  Answer: Greatest reachable fullness.
+The local runner reads the named .in file; the separate programs/ adapters
+keep the original judge filenames (feast.in / feast.out).
+
+EDGE FILES (run with the small tests)
+feast/edge-1.in: limit 8, fruits 4 and 6: 4 + 4 reaches the limit without water; the answer is 8.
+feast/edge-2.in: limit 5, both fruits 4: water cannot help, so the answer is 4.
+feast/edge-3.in: limit 10, fruits 4 and 7 (the lesson example): without water the best is 8; 7, drink to 3, then 7 reaches 10.
+
+DATASET SIZES
+feast        small  limit 15; fruits 8 and 9
+feast        medium limit 10,000; fruits 2,527 and 2,945
+feast        large  limit 5,000,000; fruits 743,782 and 939,000
+
+Expected outputs were cross-checked by a breadth-first search over
+(fullness, water used) states and, separately, by enumerating how many fruits
+of each size are eaten before and after the drink. In small, medium and large
+the answer is below the limit, so a program that just returns the limit fails.

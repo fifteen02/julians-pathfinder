@@ -1,0 +1,62 @@
+[
+  {
+    "problem": "tower",
+    "size": "small",
+    "input": "tower/small.in",
+    "output": "tower/small.out"
+  },
+  {
+    "problem": "tower",
+    "size": "medium",
+    "input": "tower/medium.in",
+    "output": "tower/medium.out"
+  },
+  {
+    "problem": "tower",
+    "size": "large",
+    "input": "tower/large.in",
+    "output": "tower/large.out"
+  },
+  {
+    "problem": "tower",
+    "size": "small",
+    "input": "tower/edge-1.in",
+    "output": "tower/edge-1.out"
+  },
+  {
+    "problem": "tower",
+    "size": "small",
+    "input": "tower/edge-2.in",
+    "output": "tower/edge-2.out"
+  },
+  {
+    "problem": "array",
+    "size": "small",
+    "input": "array/small.in",
+    "output": "array/small.out"
+  },
+  {
+    "problem": "array",
+    "size": "medium",
+    "input": "array/medium.in",
+    "output": "array/medium.out"
+  },
+  {
+    "problem": "array",
+    "size": "large",
+    "input": "array/large.in",
+    "output": "array/large.out"
+  },
+  {
+    "problem": "array",
+    "size": "small",
+    "input": "array/edge-1.in",
+    "output": "array/edge-1.out"
+  },
+  {
+    "problem": "array",
+    "size": "small",
+    "input": "array/edge-2.in",
+    "output": "array/edge-2.out"
+  }
+]

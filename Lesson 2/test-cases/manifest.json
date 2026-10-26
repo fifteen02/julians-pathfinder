@@ -1,0 +1,86 @@
+[
+  {
+    "problem": "dice",
+    "size": "small",
+    "input": "dice/small.in",
+    "output": "dice/small.out"
+  },
+  {
+    "problem": "dice",
+    "size": "medium",
+    "input": "dice/medium.in",
+    "output": "dice/medium.out"
+  },
+  {
+    "problem": "dice",
+    "size": "large",
+    "input": "dice/large.in",
+    "output": "dice/large.out"
+  },
+  {
+    "problem": "dice",
+    "size": "small",
+    "input": "dice/edge-1.in",
+    "output": "dice/edge-1.out"
+  },
+  {
+    "problem": "dice",
+    "size": "small",
+    "input": "dice/edge-2.in",
+    "output": "dice/edge-2.out"
+  },
+  {
+    "problem": "dice123",
+    "size": "small",
+    "input": "dice123/small.in",
+    "output": "dice123/small.out"
+  },
+  {
+    "problem": "dice123",
+    "size": "medium",
+    "input": "dice123/medium.in",
+    "output": "dice123/medium.out"
+  },
+  {
+    "problem": "dice123",
+    "size": "large",
+    "input": "dice123/large.in",
+    "output": "dice123/large.out"
+  },
+  {
+    "problem": "dice123",
+    "size": "small",
+    "input": "dice123/edge-1.in",
+    "output": "dice123/edge-1.out"
+  },
+  {
+    "problem": "grid",
+    "size": "small",
+    "input": "grid/small.in",
+    "output": "grid/small.out"
+  },
+  {
+    "problem": "grid",
+    "size": "medium",
+    "input": "grid/medium.in",
+    "output": "grid/medium.out"
+  },
+  {
+    "problem": "grid",
+    "size": "large",
+    "input": "grid/large.in",
+    "output": "grid/large.out"
+  },
+  {
+    "problem": "grid",
+    "size": "small",
+    "input": "grid/edge-1.in",
+    "output": "grid/edge-1.out"
+  },
+  {
+    "problem": "grid",
+    "size": "small",
+    "input": "grid/edge-2.in",
+    "output": "grid/edge-2.out"
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "problem": "hps",
+    "size": "small",
+    "input": "hps/small.in",
+    "output": "hps/small.out"
+  },
+  {
+    "problem": "hps",
+    "size": "medium",
+    "input": "hps/medium.in",
+    "output": "hps/medium.out"
+  },
+  {
+    "problem": "hps",
+    "size": "large",
+    "input": "hps/large.in",
+    "output": "hps/large.out"
+  },
+  {
+    "problem": "hps",
+    "size": "small",
+    "input": "hps/edge-1.in",
+    "output": "hps/edge-1.out"
+  },
+  {
+    "problem": "hps",
+    "size": "small",
+    "input": "hps/edge-2.in",
+    "output": "hps/edge-2.out"
+  }
+]
